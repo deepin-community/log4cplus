@@ -1,15 +1,58 @@
-Source: template-repository
-Section: unknown
+Source: log4cplus
+Section: libs
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Andrew Pollock <apollock@debian.org>
+Uploaders:
+ Tobias Frost <tobi@debian.org>
+Build-Depends:
+ cmake,
+ catch,
+ debhelper-compat (= 13),
+Build-Depends-Indep:
+ doxygen,
+ graphviz,
+ jdupes
+Standards-Version: 4.6.1
+Homepage: https://sourceforge.net/p/log4cplus/wiki/Home
+Vcs-Browser: https://salsa.debian.org/debian/log4cplus
+Vcs-Git: https://salsa.debian.org/debian/log4cplus.git
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: liblog4cplus-2.0.5
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: C++ logging API modeled after the Java log4j API - shared library
+ log4cplus is a simple to use C++ logging API providing thread-safe,
+ flexible, and arbitrarily granular control over log management and
+ configuration.  It is modeled after the Java log4j API.
+
+Package: liblog4cplus-dev
+Architecture: any
+Multi-Arch: same
+Section: libdevel
+Depends:
+ liblog4cplus-2.0.5 (= ${binary:Version}),
+ ${misc:Depends}
+Description: C++ logging API modeled after the Java log4j API - development library
+ log4cplus is a simple to use C++ logging API providing thread-safe,
+ flexible, and arbitrarily granular control over log management and
+ configuration.  It is modeled after the Java log4j API.
+ .
+ This package provides the development files.
+
+Package: liblog4cplus-doc
+Architecture: all
+Multi-Arch: foreign
+Section: doc
+Depends:
+ ${misc:Depends}
+Suggests: liblog4cplus-dev
+Description: C++ logging API modeled after the Java log4j API - doxygen documentation
+ log4cplus is a simple to use C++ logging API providing thread-safe,
+ flexible, and arbitrarily granular control over log management and
+ configuration.  It is modeled after the Java log4j API.
+ .
+ This package contains the html doxygen documentation.

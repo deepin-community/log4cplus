@@ -1,22 +1,505 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Source: https://sourceforge.net/projects/log4cplus/files/
+Upstream-Contact: Václav Haisman vhaisman@gmail.com
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+Copyright:
+  1999-2009 Contributors to log4cplus project
+  1999-2017 Tad E. Smith
+  2011-2017 Jens Rehsack & Tad E. Smith
+  2003-2017 Christopher R. Bailey
+  2003-2017 Michael CATANZARITI
+  2012-2017 Siva Chandran P
+  2003-2017 Odalio SARL
+  2010-2017 Vaclav Haisman
+License: Apache-2.0
+
+Files:
+  include/log4cplus/asyncappender.h
+  include/log4cplus/boost/deviceappender.hxx
+  include/log4cplus/callbackappender.h
+  include/log4cplus/clfsappender.h
+  include/log4cplus/config.hxx
+  include/log4cplus/config/windowsh-inc-full.h
+  include/log4cplus/config/windowsh-inc.h
+  include/log4cplus/helpers/connectorthread.h
+  include/log4cplus/helpers/fileinfo.h
+  include/log4cplus/helpers/lockfile.h
+  include/log4cplus/helpers/queue.h
+  include/log4cplus/helpers/snprintf.h
+  include/log4cplus/initializer.h
+  include/log4cplus/internal/customloglevelmanager.h
+  include/log4cplus/internal/cygwin-win32.h
+  include/log4cplus/internal/env.h
+  include/log4cplus/internal/internal.h
+  include/log4cplus/internal/socket.h
+  include/log4cplus/log4cplus.h
+  include/log4cplus/mdc.h
+  include/log4cplus/msttsappender.h
+  include/log4cplus/qt4debugappender.h
+  include/log4cplus/qt5debugappender.h
+  include/log4cplus/tchar.h
+  include/log4cplus/thread/impl/syncprims-cxx11.h
+  include/log4cplus/thread/impl/syncprims-impl.h
+  include/log4cplus/thread/impl/syncprims-pmsm.h
+  include/log4cplus/thread/impl/tls.h
+  include/log4cplus/thread/syncprims-pub-impl.h
+  include/log4cplus/thread/syncprims.h
+  include/log4cplus/version.h
+  include/log4cplus/win32consoleappender.h
+  qt4debugappender/qt4debugappender.cxx
+  qt5debugappender/qt5debugappender.cxx
+  src/asyncappender.cxx
+  src/callbackappender.cxx
+  src/clfsappender.cxx
+  src/connectorthread.cxx
+  src/cygwin-win32.cxx
+  src/env.cxx
+  src/fileinfo.cxx
+  src/lockfile.cxx
+  src/mdc.cxx
+  src/msttsappender.cxx
+  src/queue.cxx
+  src/snprintf.cxx
+  src/stringhelper-clocale.cxx
+  src/stringhelper-cxxlocale.cxx
+  src/stringhelper-iconv.cxx
+  src/syncprims.cxx
+  src/tls.cxx
+  src/version.cxx
+  src/win32consoleappender.cxx
+Copyright:
+  2009-2018 Vaclav Haisman
+  2018 Jens Rehsack
+License: BSD-2-clause
+
+
+Files: install-sh
+Copyright: 1994 X Consortium
+License: Expat
+
+
+Files: ar-lib compile depcomp missing py-compile m4/pkg.m4
+Copyright:
+ 1996-2018 Free Software Foundation, Inc.
+ 2004 Scott James Remnant <scott@netsplit.com>
+License: GPL2-0+_with_autoconf_exception
+
+
+Files: m4/ax_cflags_aix_option.m4 m4/ax_cflags_gcc_option.m4
+ m4/ax_cflags_sun_option.m4 m4/ax_type_socklen_t.m4 m4/ax_pkg_swig.m4
+ m4/ax_swig_multi_module_support.m4
+Copyright:
+ 2008 Guido U. Draheim <guidod@gmx.de>
+ 2008 Sebastian Huber <sebastian-huber@web.de>
+ 2008 Alan W. Irwin <irwin@beluga.phys.uvic.ca>
+ 2008 Rafael Laboissiere <rafael@laboissiere.net>
+ 2008 Andrew Collier <colliera@ukzn.ac.za>
+ 2011 Murray Cumming <murrayc@openismus.com>
+ 2008 Lars Brinkhoff <lars@nocrew.org>
+License: GPL2-0+_with_autoconf_macros_exception
+
+
+Files: ltmain.sh
+Copyright: 1996-2015 Free Software Foundation, Inc.
+License: GPL2.0+_with_libtool_exception
+
+
+Files: config.guess config.sub
+Copyright:
+  1992-2018 Free Software Foundation, Inc.
+License: GPL3-0+_with_autoconf_exception
+
+
+Files: m4/ax_pthread.m4 m4/ax_python_devel.m4 m4/ax_cflags_warn_all.m4
+  m4/ax_compiler_vendor.m4 m4/ax_append_flag.m4
+Copyright:
+  2008 Steven G. Johnson <stevenj@alum.mit.edu>
+  2008 Matteo Frigo
+  2008 Guido U. Draheim <guidod@gmx.de>
+  2009 Andrew Collier
+  2009 Matteo Settenvini <matteo@member.fsf.org>
+  2009 Horst Knorr <hk_classes@knoda.org>
+  2010 Rhys Ulerich <rhys.ulerich@gmail.com>
+  2011 Daniel Richard G. <skunk@iSKUNK.ORG>
+  2011 Maarten Bosmans <mkbosmans@gmail.com>
+  2013 Daniel Mullner <muellner@math.stanford.edu>
+License: GPL3-0+_with_autoconf_macros_exception
+
+
+Files: configure tests/testsuite
+Copyright: 1992-1996, 1998-2012 Free Software Foundation, Inc.
+License: FSFUL
+
+
+Files: aclocal.m4 m4/lt~obsolete.m4 m4/ltoptions.m4 m4/ltsugar.m4
+  m4/ltversion.m4 include/Makefile.in simpleserver/Makefile.in
+  Makefile.in
+Copyright: 1994-2018 Free Software Foundation Inc.
+License: FSFULLR
+
+
+Files: INSTALL m4/ax_c_ifdef.m4 m4/ax_cxx_compile_stdcxx_11.m4
+  m4/ax_gcc_var_attribute.m4 m4/ax_gcc_func_attribute.m4
+Copyright:
+  1994-2013 Free Software Foundation Inc.
+  2008 Ludovic Courtes <ludo@chbouib.org>
+  2008 Benjamin Kosnik <bkoz@redhat.com>
+  2012 Zack Weinberg <zackw@panix.com>
+  2013 Roy Stogner <roystgnr@ices.utexas.edu>
+  2014 Alexey Sokolov <sokolov@google.com>
+  2013 Gabriele Svelto <gabriele.svelto@gmail.com>
+License: FSFAP
+
+
+Files: catch/*
+Copyright: 2012,2015 Martin Moene
+  2010-2019 Two Blue Cubes Ltd.
+  2017 Justin R. Wilson
+License: BSL-1.0
+Comment: the catch folder is removed in d/clean (and packaged catch used)
+
+Files: catch/contrib/CatchAddTests.cmake
+  catch/contrib/Catch.cmake
+Copyright: 2000-2020 Kitware, Inc. and Contributors
+License: BSD-3-clause
+Comment: the catch folder is removed in d/clean (and packaged catch used)
+
+Files: catch/CMake/llvm-cov-wrapper
+  catch/CMake/Findcodecov.cmake
+  catch/CMake/FindGcov.cmake
+  catch/CMake/FindLcov.cmake
+Comment: Files are originally from https://github.com/RWTH-HPC/CMake-codecov
+Copyright: 2015-2017 RWTH Aachen University, Federal Republic of Germany
+License: BSD-3-clause
+
+
+Files: threadpool/*
+Copyright: 2012-2015 Jakob Progsch
+  2014-2015 Václav Zeman.
+License: ZLib
+
+
+Files: debian/*
+Copyright:
+ Copyright 2010 Daigo Moriwaki <daigo@debian.org>
+ Copyright 2011 Andrew Pollock <apollock@debian.org>
+ Copyright 2020-2022 Tobias Frost <tobi@debian.org>
+License: GPL-3.0+
+
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
  .
- This package is distributed in the hope that it will be useful,
+     https://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, the complete text of the Apache License version 2 can
+ be found in '/usr/share/common-licenses/Apache-2.0'.
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of  source code must  retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ FITNESS  FOR A PARTICULAR  PURPOSE ARE  DISCLAIMED.  IN NO  EVENT SHALL  THE
+ APACHE SOFTWARE  FOUNDATION  OR ITS CONTRIBUTORS  BE LIABLE FOR  ANY DIRECT,
+ INDIRECT, INCIDENTAL, SPECIAL,  EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLU-
+ DING, BUT NOT LIMITED TO, PROCUREMENT  OF SUBSTITUTE GOODS OR SERVICES; LOSS
+ OF USE, DATA, OR  PROFITS; OR BUSINESS  INTERRUPTION)  HOWEVER CAUSED AND ON
+ ANY  THEORY OF LIABILITY,  WHETHER  IN CONTRACT,  STRICT LIABILITY,  OR TORT
+ (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN  ANY WAY OUT OF THE  USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ * Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+ .
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+ .
+ * Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+License: BSL-1.0
+ Boost Software License - Version 1.0 - August 17th, 2003
+ .
+ Permission is hereby granted, free of charge, to any person or organization
+ obtaining a copy of the software and accompanying documentation covered by
+ this license (the "Software") to use, reproduce, display, distribute,
+ execute, and transmit the Software, and to prepare derivative works of the
+ Software, and to permit third-parties to whom the Software is furnished to
+ do so, all subject to the following:
+ .
+ The copyright notices in the Software and this entire statement, including
+ the above license grant, this restriction and the following disclaimer,
+ must be included in all copies of the Software, in whole or in part, and
+ all derivative works of the Software, unless such copies or derivative
+ works are solely in the form of machine-executable object code generated by
+ a source language processor.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
+ SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
+ FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ DEALINGS IN THE SOFTWARE.
+
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR
+ OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+ .
+ Except as contained in this notice, the name of the X Consortium shall
+ not be used in advertising or otherwise to promote the sale, use or
+ other dealings in this Software without prior written authorization
+ from the X Consortium.
+
+
+License: GPL2-0+_with_autoconf_exception
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2, or (at your option)
+ any later version.
+ .
+ This program is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
+ along with this program.  If not, see <https://www.gnu.org/licenses/>.
  .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ As a special exception to the GNU General Public License, if you
+ distribute this file as part of a program that contains a
+ configuration script generated by Autoconf, you may include it under
+ the same distribution terms that you use for the rest of that program.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ Version 2 can be found in '/usr/share/common-licenses/GPL-2'.
+
+
+License: GPL2-0+_with_autoconf_macros_exception
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the
+ Free Software Foundation; either version 2 of the License, or (at your
+ option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ As a special exception, the respective Autoconf Macro's copyright owner gives
+ unlimited permission to copy, distribute and modify the configure scripts that
+ are the output of Autoconf when processing the Macro. You need not follow the
+ terms of the GNU General Public License when using or distributing such
+ scripts, even though portions of the text of the Macro appear in them. The GNU
+ General Public License (GPL) does govern all other use of the material that
+ constitutes the Autoconf Macro.
+ .
+ This special exception to the GPL applies to versions of the Autoconf Macro
+ released by the Autoconf Archive. When you make and distribute a modified
+ version of the Autoconf Macro, you may extend this special exception to the GPL
+ to apply to your modified version as well.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ Version 2 can be found in '/usr/share/common-licenses/GPL-2'.
+
+
+License: GPL2.0+_with_libtool_exception
+ This is free software; see the source for copying conditions.
+ There is NO warranty; not even for MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.
+ .
+ GNU Libtool is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ As a special exception to the GNU General Public License,
+ if you distribute this file as part of a program or library that
+ is built using GNU Libtool, you may include this file under the
+ same distribution terms that you use for the rest of that program.
+ .
+ GNU Libtool is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ Version 2 can be found in '/usr/share/common-licenses/GPL-2'.
+
+
+License: GPL3-0+_with_autoconf_exception
+ This file is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, see <https://www.gnu.org/licenses/>.
+ .
+ As a special exception to the GNU General Public License, if you
+ distribute this file as part of a program that contains a
+ configuration script generated by Autoconf, you may include it under
+ the same distribution terms that you use for the rest of that
+ program.  This Exception is an additional permission under section 7
+ of the GNU General Public License, version 3 ("GPLv3").
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ Version 3 can be found in '/usr/share/common-licenses/GPL-3'.
+
+
+License: GPL3-0+_with_autoconf_macros_exception
+ This program is free software: you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the
+ Free Software Foundation, either version 3 of the License, or (at your
+ option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ As a special exception, the respective Autoconf Macro's copyright owner
+ gives unlimited permission to copy, distribute and modify the configure
+ scripts that are the output of Autoconf when processing the Macro. You
+ need not follow the terms of the GNU General Public License when using
+ or distributing such scripts, even though portions of the text of the
+ Macro appear in them. The GNU General Public License (GPL) does govern
+ all other use of the material that constitutes the Autoconf Macro.
+ .
+ This special exception to the GPL applies to versions of the Autoconf
+ Macro released by the Autoconf Archive. When you make and distribute a
+ modified version of the Autoconf Macro, you may extend this special
+ exception to the GPL to apply to your modified version as well.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ Version 3 can be found in '/usr/share/common-licenses/GPL-3'.
+
+
+License: GPL-3.0+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ can be found in ‘/usr/share/common-licenses/GPL-3’.
+
+
+License: FSFAP
+ Copying and distribution of this file, with or without modification,
+ are permitted in any medium without royalty provided the copyright
+ notice and this notice are preserved. This file is offered as-is,
+ without warranty of any kind.
+
+
+License: FSFUL
+ This configure script is free software; the Free Software Foundation
+ gives unlimited permission to copy, distribute and modify it.
+
+
+License: FSFULLR
+ This file is free software; the Free Software Foundation
+ gives unlimited permission to copy and/or distribute it,
+ with or without modifications, as long as this notice is preserved.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+ even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE.
+
+
+License: ZLib
+ This software is provided 'as-is', without any express or implied
+ warranty. In no event will the authors be held liable for any damages
+ arising from the use of this software.
+ .
+ Permission is granted to anyone to use this software for any purpose,
+ including commercial applications, and to alter it and redistribute it
+ freely, subject to the following restrictions:
+ .
+ 1. The origin of this software must not be misrepresented; you must not
+ claim that you wrote the original software. If you use this software
+ in a product, an acknowledgment in the product documentation would be
+ appreciated but is not required.
+ .
+ 2. Altered source versions must be plainly marked as such, and must not be
+ misrepresented as being the original software.
+ .
+ 3. This notice may not be removed or altered from any source
+ distribution.

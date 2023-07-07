@@ -1,0 +1,25 @@
+Description: Generate a pkgconfig file with CMake
+Author: Tobias Frost <tobi@debian.org>
+Forwarded: https://github.com/log4cplus/log4cplus/pull/482
+Applied-Upstream: https://github.com/log4cplus/log4cplus/commit/38a2ce478028894186710f3776f8d7f81cb7ff87
+Last-Update: 2022-10-09 <YYYY-MM-DD, last update of the meta-information, optional>
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -205,3 +205,15 @@
+ message (STATUS "Compiler flags: ${CMAKE_CXX_FLAGS}")
+ message (STATUS "System name: ${CMAKE_SYSTEM_NAME}")
+ message (STATUS "System version: ${CMAKE_SYSTEM_VERSION}")
++
++# generate pkconfig file.
++set(prefix "${CMAKE_INSTALL_PREFIX}")
++set(exec_prefix "\${prefix}")
++set(libdir "\${prefix}/${CMAKE_INSTALL_LIBDIR}")
++set(includedir "\${prefix}/${CMAKE_INSTALL_INCLUDEDIR}")
++set(VERSION "${log4cplus_version_major}.${log4cplus_version_minor}.${log4cplus_version_patch}")
++configure_file(log4cplus.pc.in ${CMAKE_BINARY_DIR}/lib/pkgconfig/log4cplus.pc @ONLY)
++
++
++install(FILES ${CMAKE_BINARY_DIR}/lib/pkgconfig/log4cplus.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig/)
++

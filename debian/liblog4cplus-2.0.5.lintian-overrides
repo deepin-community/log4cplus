@@ -1,0 +1,4 @@
+# Upstream does not maintain an intended SO Name, so using package version as substitute.
+liblog4cplus-2.0.5: package-name-doesnt-match-sonames liblog4cplus-2.0-3
+# Not doing symbols files for C++ libraries.
+liblog4cplus-2.0.5: no-symbols-control-file usr/lib/x86_64-linux-gnu/liblog4cplus-2.0.so.3.4.*
