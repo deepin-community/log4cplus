@@ -1,0 +1,60 @@
+Description: Tweak cmake build that SONAME matches that of the autotools build
+ Even if upstream does not maintain an intended SO-NAME*, the cmake build should
+ at least yield the same result. This patch does it by hand-adjusting the version.
+ .
+ Update: Upstream does not care about SONAMEs much, so we need to keep this
+ patch and deviate from upstream, until the next SONAME bump, where we then can
+ hopefully switch to upstream's again (or switch back to autotools…). Doing
+ the switch now would mean an unnecessary library transition.
+Author: Tobias Frost <tobi@debian.org>
+Bug: https://github.com/log4cplus/log4cplus/issues/479
+Forwarded: <URL|no|not-needed, useless if you have a Bug field, optional>
+Last-Update: 2022-10-09 <YYYY-MM-DD, last update of the meta-information, optional>
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -120,7 +120,9 @@
+     VERSION "${log4cplus_version_major}.${log4cplus_version_minor}.${log4cplus_version_patch}")
+ else ()
+   set_target_properties (${log4cplus} PROPERTIES
+-    SOVERSION "${log4cplus_soversion}")
++    VERSION "${log4cplus_libtoolversion}"
++    SOVERSION "${log4cplus_soversion}"
++    OUTPUT_NAME "${log4cplus}-${log4cplus_version_major}.${log4cplus_version_minor}")
+ endif ()
+ target_compile_definitions (${log4cplus} PRIVATE INSIDE_LOG4CPLUS)
+ 
+@@ -176,6 +178,22 @@
+     NAMESPACE "${namespace}"
+     DESTINATION "${config_install_dir}"
+ )
++if (ANDROID)
++  # Android does not seem to have SO version support.
++elseif (WIN32)
++  # no symlink for win32
++else ()
++  get_target_property(libname ${log4cplus} OUTPUT_NAME)
++  get_target_property(libversion ${log4cplus} VERSION)
++  set(lib ${CMAKE_SHARED_LIBRARY_PREFIX})
++  set(so ${CMAKE_SHARED_LIBRARY_SUFFIX})
++  install(CODE "execute_process(
++    COMMAND bash -c \"set -e
++      cd $DESTDIR/${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}
++      echo -n -- Installing: `pwd`/
++      ln -sfv ${lib}${libname}${so}.${libversion} ${lib}${log4cplus}${so}
++      \")")
++endif ()
+ 
+ install(TARGETS ${log4cplus} EXPORT "${targets_export_name}"
+                           INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -36,6 +36,7 @@
+ message("-- Generating build for Log4cplus version ${log4cplus_version_major}.${log4cplus_version_minor}.${log4cplus_version_patch}")
+ set (log4cplus_soversion 3)
+ set (log4cplus_postfix "")
++set (log4cplus_libtoolversion 3.4.7)
+ if (APPLE)
+   set (log4cplus_macho_current_version 7.0.0)
+   set (log4cplus_macho_compatibility_version 3.0.0)

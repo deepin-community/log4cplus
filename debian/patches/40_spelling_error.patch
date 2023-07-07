@@ -1,0 +1,111 @@
+Description: Spelling fix
+ Found by lintian
+Author: Tobias Frost <tobi@debian.org>
+Forwarded: https://github.com/log4cplus/log4cplus/pull/484
+Applied-Upstream: https://github.com/log4cplus/log4cplus/commit/1d9cc40ed96dae38982da870cafae62095055264
+Last-Update: 2022-10-09 <YYYY-MM-DD, last update of the meta-information, optional>
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/include/log4cplus/helpers/queue.h
++++ b/include/log4cplus/helpers/queue.h
+@@ -120,7 +120,7 @@
+         //! ERROR_BIT signals error.
+         ERROR_BIT   = 0x0010,
+ 
+-        //! ERROR_AFTER signals error that has occured after queue has
++        //! ERROR_AFTER signals error that has occurred after queue has
+         //! already been touched.
+         ERROR_AFTER = 0x0020
+     };
+--- a/src/patternlayout.cxx
++++ b/src/patternlayout.cxx
+@@ -836,7 +836,7 @@
+             }
+             else {
+                 tostringstream buf;
+-                buf << LOG4CPLUS_TEXT("Error occured in position ")
++                buf << LOG4CPLUS_TEXT("Error occurred in position ")
+                     << pos
+                     << LOG4CPLUS_TEXT(".\n Was expecting digit, instead got char \"")
+                     << c
+--- a/tests/appender_test/main.cxx
++++ b/tests/appender_test/main.cxx
+@@ -183,7 +183,7 @@
+             }
+         }
+         catch(std::exception const & e) {
+-            log4cplus::tcout << "**** Exception occured: " << e.what()
++            log4cplus::tcout << "**** Exception occurred: " << e.what()
+                              << std::endl;
+         }
+     }
+--- a/tests/configandwatch_test/main.cxx
++++ b/tests/configandwatch_test/main.cxx
+@@ -72,7 +72,7 @@
+     }
+     catch(...) {
+         tcout << LOG4CPLUS_TEXT("Exception...") << endl;
+-        LOG4CPLUS_FATAL(root, "Exception occured...");
++        LOG4CPLUS_FATAL(root, "Exception occurred...");
+     }
+ 
+     tcout << LOG4CPLUS_TEXT("Exiting main()...") << endl;
+--- a/tests/ndc_test/main.cxx
++++ b/tests/ndc_test/main.cxx
+@@ -49,7 +49,7 @@
+     }
+     catch(...) {
+         cout << "Exception..." << endl;
+-        Logger::getRoot().log(FATAL_LOG_LEVEL, LOG4CPLUS_TEXT("Exception occured..."));
++        Logger::getRoot().log(FATAL_LOG_LEVEL, LOG4CPLUS_TEXT("Exception occurred..."));
+     }
+ 
+     cout << "Exiting main()..." << endl;
+--- a/tests/patternlayout_test/main.cxx
++++ b/tests/patternlayout_test/main.cxx
+@@ -51,7 +51,7 @@
+     }
+     catch(...) {
+         cout << "Exception..." << endl;
+-        Logger::getRoot().log(FATAL_LOG_LEVEL, LOG4CPLUS_TEXT("Exception occured..."));
++        Logger::getRoot().log(FATAL_LOG_LEVEL, LOG4CPLUS_TEXT("Exception occurred..."));
+     }
+ 
+     cout << "Exiting main()..." << endl;
+--- a/tests/performance_test/main.cxx
++++ b/tests/performance_test/main.cxx
+@@ -139,7 +139,7 @@
+     }
+     catch(...) {
+         tcout << LOG4CPLUS_TEXT("Exception...") << endl;
+-        LOG4CPLUS_FATAL(root, "Exception occured...");
++        LOG4CPLUS_FATAL(root, "Exception occurred...");
+     }
+ 
+     tcout << LOG4CPLUS_TEXT("Exiting main()...") << endl;
+--- a/tests/propertyconfig_test/main.cxx
++++ b/tests/propertyconfig_test/main.cxx
+@@ -56,7 +56,7 @@
+     }
+     catch(...) {
+         tcout << LOG4CPLUS_TEXT("Exception...") << endl;
+-        LOG4CPLUS_FATAL(root, LOG4CPLUS_TEXT("Exception occured..."));
++        LOG4CPLUS_FATAL(root, LOG4CPLUS_TEXT("Exception occurred..."));
+     }
+ 
+     tcout << LOG4CPLUS_TEXT("Exiting main()...") << endl;
+--- a/tests/thread_test/main.cxx
++++ b/tests/thread_test/main.cxx
+@@ -125,10 +125,10 @@
+         LOG4CPLUS_INFO(logger, "Exiting main()...");
+     }
+     catch(std::exception &e) {
+-        LOG4CPLUS_FATAL(Logger::getRoot(), "main()- Exception occured: " << e.what());
++        LOG4CPLUS_FATAL(Logger::getRoot(), "main()- Exception occurred: " << e.what());
+     }
+     catch(...) {
+-        LOG4CPLUS_FATAL(Logger::getRoot(), "main()- Exception occured");
++        LOG4CPLUS_FATAL(Logger::getRoot(), "main()- Exception occurred");
+     }
+ 
+     return 0;

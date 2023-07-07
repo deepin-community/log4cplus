@@ -1,0 +1,10 @@
+Document: liblog4cplus-doc
+Title: log4cplus doxygen documentation
+Author: Various
+Abstract: This set of documents provides help for using the log4cplus library.
+Section: Programming
+
+Format: html
+Index: /usr/share/doc/liblog4cplus-dev/html/index.html
+Files: /usr/share/doc/liblog4cplus-dev/html/*.html
+

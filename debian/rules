@@ -1,4 +1,42 @@
 #!/usr/bin/make -f
 
+DH_VERBOSE=1
+
+include /usr/share/dpkg/default.mk
+
+export DEB_CXXFLAGS_MAINT_APPEND := --std=c++11
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
 %:
-	dh $@
+	dh $@ --buildsystem=cmake
+
+override_dh_auto_clean:
+	dh_auto_clean
+	# building tests separately, see #978617
+	dh_auto_clean --builddirectory build-with-tests
+
+override_dh_auto_configure-arch:
+	dh_auto_configure -- -DWITH_UNIT_TESTS=OFF
+	dh_auto_configure --builddirectory build-with-tests
+
+override_dh_auto_build-arch:
+	dh_auto_build
+	dh_auto_build --builddirectory build-with-tests
+
+override_dh_auto_build-indep:
+	cd docs && mkdir -p log4cplus-$(DEB_VERSION_UPSTREAM)/docs && doxygen doxygen.config
+
+override_dh_installdocs-indep:
+	dh_installdocs -i
+	dh_doxygen
+
+override_dh_link-indep:
+	dh_link
+	jdupes -rl debian/liblog4cplus-doc/usr/share/doc/liblog4cplus-dev/html/
+
+override_dh_auto_test-arch:
+	dh_auto_test --builddirectory build-with-tests
+
+# nothing todo for indep:
+override_dh_auto_install-indep:
+override_dh_auto_test-indep:

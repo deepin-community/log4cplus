@@ -1,0 +1,9 @@
+docs/log4cplus.pdf
+catch/
+config.guess
+config.sub
+configure.ac
+configure
+Makefile.am.*
+Makefile.in
+docs/log4cplus-*/

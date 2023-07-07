@@ -1,0 +1,4 @@
+usr/include/log4cplus/*
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/*
+usr/lib/${DEB_HOST_MULTIARCH}/cmake/*
+usr/lib/${DEB_HOST_MULTIARCH}/liblog4cplus*.so
